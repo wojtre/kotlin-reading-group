@@ -9,8 +9,11 @@ Syntax:
 ** does not need context
     
 * simplier: {x, y -> x + y }
-* simplier: { it.doSth()}
+* simplier: { it.doSth()} - default parameter, don;t abuse it, sometimes better to name it different for clean code
 * by method reference people.maxBy(Person::age)
+* bound member  Person p    p::age
+* local methods ::someMethod  listing 5.2
+* map.forEach { _, value -> println("$value!") }  - ignore unused variables
 
  Listing 3.1
  
@@ -21,6 +24,7 @@ Syntax:
  As func argument
  fun test (myLamda:(Int, Int -> Unit))
  * test({x,y->print(x+y)}
+ * test() {x,y -> print(x+y)}
  * test {x,y -> print(x+y)}
  
  Listing 3.2, 3.3
@@ -31,4 +35,11 @@ Syntax:
  https://kotlinlang.org/docs/reference/returns.html#return-at-labels
  * list.map @qualifier{el -> return@qualifier el*2}
  
+ 4. Variables scope
+ * in contrary to java we can access final variables
+ * in java new double[0], in kotlin var a = 323.32 
+ * values are stored with lambdas code in wrappers
+ 
+ 
+ Listing 4.2
  
