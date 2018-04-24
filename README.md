@@ -4,9 +4,7 @@ Some Kotlin's lambdas examples for kotlin reading group meeting.
 (5.1)
 1. Basics 
 Syntax:     
-* x: Int, y: Int -> x + y}
-** brackets around whole lamda, not only body
-** does not need context
+* x: Int, y: Int -> x + y} - brackets around whole lamda, not only body - does not need context
     
 * simplier: {x, y -> x + y }
 * simplier: { it.doSth()} - default parameter, don;t abuse it, sometimes better to name it different for clean code
@@ -43,3 +41,26 @@ Syntax:
  
  Listing 4.2
  
+(5.2)
+5. Functional APIs for collection
+* map, filter
+* all, any, count, find
+* groupBy
+* flatten, flatMap
+* between every operation is a new collection being created
+
+6. Lazy collections
+* intermediate operations: map, filter
+* terminal operations: toList, find
+* same concept as streams in java 8
+* in sequences doesnt matter if first filter
+* generating sequence with genarateSequence and takeWhile
+
+7. Running code from java with kotlin lambdas
+* works with functional interfaces (interface with one function) and with SAM (single abstract method)
+* kotlin lambdas are converted into anonymous class
+
+8. Lambdas with receivers
+* not language feature but library
+* with(someVar) {this.toString()} - returns the last expresion
+* apply(someVar) {this.doStuff()} - returns received object (this)
