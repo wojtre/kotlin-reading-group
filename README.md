@@ -4,7 +4,7 @@ Some Kotlin's lambdas examples for kotlin reading group meeting.
 (5.1)
 1. Basics 
 Syntax:     
-* x: Int, y: Int -> x + y} - brackets around whole lamda, not only body - does not need context
+* {x: Int, y: Int -> x + y} - brackets around whole lamda, not only body - does not need context
     
 * simplier: {x, y -> x + y }
 * simplier: { it.doSth()} - default parameter, don;t abuse it, sometimes better to name it different for clean code
@@ -17,7 +17,7 @@ Syntax:
  
  2. Running lambdas
  * {print("Hello")}()
- * run({print("Hello"})
+ * run({print("Hello")})
  
  As func argument
  fun test (myLamda:(Int, Int -> Unit))
